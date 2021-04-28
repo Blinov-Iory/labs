@@ -14,10 +14,7 @@
     private $hp;
     private $mother;
     private $father;
-    //private $grandmother; //бабушка.
-    //private $grandfather; //дедушка.
     
-    //function __construct($name,$age,$mother,$father,$grandmother,$grandfather){
     function __construct($name,$age,$mother,$father){
       $this->name = $name;
       $this->age = $age;
@@ -28,8 +25,6 @@
     
     function getMother(){return $this->mother;}
     function getFather(){return $this->father;}
-    //function getGrandmother(){return $this->grandmother;} //Бабушка.
-    //function getGrandfather(){return $this->grandfather;} //Дедушка.
     function getName(){return $this->name;}
     function sayHi($name){
       echo "Привет $name, меня зовут ".$this->name;
@@ -63,6 +58,6 @@
   $oleg = new Person("Олег",34, $petya);
   $olga = new Person("Ольга",34,$nina);
   $igor = new Person("Игорь",10,$olga,$oleg);
-  //echo $olga->getInfo();
+
   echo $igor->getInfo();
 ?>
